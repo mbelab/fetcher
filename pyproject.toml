@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fetcher"
+version = "0.1.0"
+authors = [{name = "Michael Berghammer", email = "info@mbelab.de"}]
+description = "Python tool to fetch and manage resource files."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = ["pyyaml", "requests"]
+keywords = ["fetch", "resources", "management", "tool"]
+
+[project.scripts]
+fetcher = "fetcher.main:main"
