@@ -1,0 +1,6 @@
+## requirements file for pip
+## Michael Berghammer
+
+
+pyyaml
+requests
