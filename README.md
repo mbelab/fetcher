@@ -6,35 +6,85 @@ Python tool to fetch and manage resource files.
 
 > **Note:** Files in subdirectories named *private* are not tracked by Git.
 
+- [usage](#usage)
+- [install](#install)
+
 ## usage
+
+Get command line info:
+
+    $ fetcher --help
+
+    usage: fetcher [-h] [-g] [-c] RESOURCES
+
+    Fetch and manage resource files.
+
+    positional arguments:
+    RESOURCES       Resources file
+
+    options:
+    -h, --help      show this help message and exit
+    -g, --generate  Generate new resources file
+    -c, --clean     Remove fetched resources
+
+    (c) mbelab - Michael Berghammer
+
+Generate template resources file:
+
+    $ fetcher --generate resources.yaml
+
+    Resources file: resources.yaml
+    Generate new resources file...
+    Done.
+
+Update resources defined in resources file:
+
+    $ fetcher resources.yaml
+
+    Resources file: resources.yaml
+    Fetch resources...
+    Process 1/3...
+    Process 2/3...
+    Process 3/3...
+    Done.
+
+Cleanup resources defined in resources file:
+
+    $ fetcher --clean resources.yaml
+
+    Resources file: resources.yaml
+    Remove fetched resources...
+    Done.
+
+## install
 
 Install `fetcher`:
 
-    pip install .
+    $ pip install .
 
 Install `fetcher` locally (virtual environment):
 
-    python3 -m virtualenv .venv
-    source .venv/bin/activate
+    $ python3 -m virtualenv .venv
+    $ source .venv/bin/activate
 
-    pip install .
+    $ pip install .
 
 Build `wheel` for e.g. deployment (locally):
 
-    python3 -m virtualenv .venv
-    source .venv/bin/activate
+    $ python3 -m virtualenv .venv
+    $ source .venv/bin/activate
 
-    pip install build
-    python -m build
+    $ pip install build
+    $ python -m build
 
 Install from `wheel`:
 
-    pip install dist/*.whl
+    $ pip install dist/*.whl
 
 Prepare environment/shell for local development:
 
-    python3 -m virtualenv .venv
-    source .venv/bin/activate
+    $ python3 -m virtualenv .venv
+    $ source .venv/bin/activate
 
-    pip install -r requirements.txt
-    export PYTHONPATH='./src'
+    $ pip install -r requirements.txt
+    $ export PYTHONPATH='./src'
