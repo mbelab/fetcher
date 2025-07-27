@@ -4,3 +4,15 @@
 
 # private directories (also in subdirectories)
 **private/
+
+# python and pytest cache directories (also in subdirectories)
+**__pycache__/
+**.pytest_cache/
+
+# venv directory (virtual python environment)
+.venv/*
+
+# build and dist artifacts
+**egg**/
+build/*
+dist/*
