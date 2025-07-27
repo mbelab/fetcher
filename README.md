@@ -6,6 +6,17 @@ Python tool to fetch and manage resource files.
 
 > **Note:** Files in subdirectories named *private* are not tracked by Git.
 
+This tool can fetch (clone and update) files, defined in a human-readable file.  
+Resources files can be in `yaml` or `json` format and can be edited with any text editors.
+
+Currently there are several types of resources supported:
+
+- `file`: File type - local or remote files.
+- `git`: Git type - files in (remote) Git repositories.
+- `http`: HTTP type - file content, accessible via http.
+
+For installation and usage see:
+
 - [usage](#usage)
 - [install](#install)
 
